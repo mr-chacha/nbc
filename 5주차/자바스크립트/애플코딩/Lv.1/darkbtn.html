@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main. css">
+  <title>Document</title>
+</head>
+
+<body>
+  <span class="badge bg-dark">Dark 🔄</span>
+</body>
+<script>
+  //변수문법을 사용해서 다크버튼만들기
+  //1.버튼클릭했을때 dark가 ligth로 바뀌게 하기
+  //2.또 누르면 dark로 만들기
+  //3.클릭횟수가 홀수면 내부글자를 ligth로 만들고
+  //4.클릭횟수가 짝수면 내부글자를 dark로 만들기르 반복
+  //4-1.클릭횟수를 기록할 변수를 만들것
+  //5.변수만들기 : var 변수명 =넣을자료; (var age = 20;)
+  //6.변수에는 모든자료를 다넣을수있음(문자,숫자,document,function 다 가능)
+
+  var count = 0;                            //ㄱ.클릭횟수를 담을 count라는 변수를만듬
+  document.querySelector('.badge').addEventListener('click', function () {
+    count += 1;                             //ㄴ.클릭됐을때마다 count를 +1해줌
+    if (count % 2 == 0) {                   //ㄷ.그리고 count횟수가 짝수면 
+      document.querySelector('.badge').innerHTML = ('ligth 🔄')      //ㄹ.글자를 ligth로 바꿔라
+    } else {
+      document.querySelector('.badge').innerHTML = ('Dark 🔄')     //ㅁ.아니면 consol에 Dark로 바꿔라
+    }
+    document.querySelector('.badge').classList.toggle('white')
+  })
+  document.querySelector('.badge').classList.toggle('white')
+
+
+</script>
+
+</html>

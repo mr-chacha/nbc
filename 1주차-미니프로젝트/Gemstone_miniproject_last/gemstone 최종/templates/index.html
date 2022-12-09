@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <title>gemstone</title>
+    <link rel="stylesheet" href="../static/css/reset.css" type="text/css" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="js/jquery.slicknav.js" type="text/JavaScript"></script>
+    <script src="js/jquery.effects.core.js" type="text/javascript"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+      type="text/javascript"
+    ></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      $(document).ready(function () {
+        show_comment();
+      });
+
+      function save_order() {
+        let name = $("#name").val();
+        let comment = $("#comment").val();
+        $.ajax({
+          type: "POST",
+          url: "/miniproject",
+          data: { name_give: name, comment_give: comment },
+          success: function (response) {
+            alert(response["msg"]);
+            window.location.reload();
+          },
+        });
+      }
+      function show_comment() {
+        $.ajax({
+          type: "GET",
+          url: "/miniproject",
+          data: {},
+          success: function (response) {
+            let rows = response["comments"];
+            for (let i = 0; i < rows.length; i++) {
+              let name = rows[i]["name"];
+              let comment = rows[i]["comment"];
+
+              let temp_html = `<li>
+                    <p>${name}</p>
+                    <p>${comment}</p>
+                  </li>`;
+
+              $("#comment_box").append(temp_html);
+            }
+          },
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+      <!--header-->
+      <div class="header">
+        <h2>GEMSTONE</h2>
+        <p>어구 : 박성환, 차상현, 정윤숙, 지회수, 신정근</p>
+      </div>
+      <!--//header-->
+
+      <!--main_box-->
+      <div class="main_box inner">
+        <ul>
+          <li onclick="#">
+            <a href="https://c9926.github.io/chachapage/"
+              ><img src="../static/image/main_card1.png" alt="main_card1"
+            /></a>
+          </li>
+          <li onclick="#">
+            <a
+              href="https://newasborn.github.io/hoesu-s-page/templates/index.html"
+              ><img src="../static/image/main_card2.png" alt="main_card2"
+            /></a>
+          </li>
+          <li onclick="#">
+            <a href="https://ys739.github.io/Gemstone_mypage_site/"
+              ><img src="../static/image/main_card3.png" alt="main_card1"
+            /></a>
+          </li>
+          <li onclick="#">
+            <a href="http://13.209.77.206:9999/"
+              ><img src="../static/image/main_card4.png" alt="main_card4"
+            /></a>
+          </li>
+          <li onclick="#">
+            <a href="https://hwan910.github.io/mapage/"
+              ><img src="../static/image/main_card5.png" alt="main_card5"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <!--//main_box-->
+
+      <!--main_about-->
+      <div class="main_content inner">
+        <div class="content_btn">
+          <div class="sub_active" id="main_about_btn">소개</div>
+          <div id="main_comment_btn">방명록</div>
+        </div>
+        <!--//main_about-->
+        <div class="main_about">
+          <h2>About</h2>
+          <div class="txt_container">
+            <div class="txt_box">
+              <p id="zem_icon">💎</p>
+
+              <p>
+                우리 팀은 비전공자이며, 개발 경력이 없는 신입으로 구성되어
+                있습니다.<br />
+                그러나 우리 팀은 누구보다도 최선을 다하여 내일배움캠프 수료 후
+                어디에서든지 활약할 수 있는 멋진 개발자가 되기를 목표로 합니다.
+              </p>
+            </div>
+            <div class="txt_box">
+              <p id="zem_icon">💎💎</p>
+              <p id="team_desc">
+                우리가 흔히 알고 가장 인기가 많은 보석 다이아몬드는 딱딱한 돌
+                입니다. 아주 단단한 돌이죠.<br />다이아몬드는 너무 단단한 돌이라
+                제대로 된 연마법이 정립되기 전까진 인기 있는 보석이
+                아니었습니다. <br />이렇듯 보석은 원석을 수많은 공을 들여
+                연마하고, 가공하고, 열처리하고 가공을 끊임없이 연마해서 반짝반짝
+                빛이 나야 <br />그제야 보석으로서의 가치를 가지게 됩니다. 흔히
+                보석마다 가치가 결정되는 시간은 각각 다르지만, 어느 보석 하나
+                쉽게 얻을 수 없습니다. <br /><br />
+                우리는 원석입니다.<br />
+                <br />저희가 어떤 보석으로서 어떤 빛을 내고 어떤 값어치가 될지
+                모르겠지만<br />
+                원석이 보석이 되기까지의 시간 127일 동안 어떤 보석이 될지 기대가
+                됩니다.
+              </p>
+            </div>
+            <div class="txt_box">
+              <p id="zem_icon">💎💎💎</p>
+              <p id="team_promise">
+                시간을 잘 지키며, 항상 카메라를 켜놓고 공부하기를 약속합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--main_comment-->
+        <div class="main_comment">
+          <h2>Visitor</h2>
+          <!--댓글-->
+          <div class="shin_order-info">
+            <div>
+              <div class="name_comment mb-3">
+                <input
+                  id="name"
+                  type="text"
+                  maxlength="10"
+                  class="form-control"
+                  placeholder="닉네임"
+                />
+              </div>
+              <div class="txt_comment mb-3">
+                <input
+                  id="comment"
+                  type="text"
+                  maxlength="50"
+                  class="form-control"
+                  placeholder="팀 어구에게 응원 한 마디 남겨주세요!"
+                />
+              </div>
+              <button onclick="save_order()" type="button" class="comment_btn">
+                남기기
+              </button>
+            </div>
+          </div>
+
+          <div class="comment_box">
+            <div>
+              <div>
+                <p>Name</p>
+                <span></span>
+                <p>COMMENT</p>
+              </div>
+            </div>
+            <div>
+              <ul id="comment_box"></ul>
+            </div>
+          </div>
+          <!--//댓글-->
+        </div>
+        <!--//main_comment-->
+      </div>
+    </div>
+
+    <script src="../static/js/main.js"></script>
+  </body>
+</html>

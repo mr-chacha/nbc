@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+
+  <title>Hello, world!</title>
+
+  <!--Jquery-->
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+  <!--부트스트랩-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+  <button id="open">로그인</button>
+
+  <div class="black-bg">
+    <div class="white-bg">
+
+      <h4>로그인하세요</h4>
+      <form action="success.html">
+        <div class="my-3">
+          <input type="text" class="form-control" id="email">
+        </div>
+        <div class="my-3">
+          <input type="password" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary" id="send">전송</button>
+        <button type="button" class="btn btn-danger" id="close">닫기</button>
+      </form>
+      <script>
+        // input에 입력한 값을 변수 id에 담아줌
+        document.getElementById('send').addEventListener('click', function () {
+          const add2 = document.getElementById('email').value
+          if (add == '') {
+            alert('입력하세요')
+          } else {
+            alert('로그인됐어요')
+          }
+        })
+
+        //모달창 만들기
+        //1.클릭시 show라는 클래스를 black-bg 뒤에추가하기
+        document.getElementById('open').addEventListener('click', function () {
+          document.querySelector('.black-bg').classList.add('show');
+        })
+        //모달창 닫기
+        //1.배경클릭시 show라는 클래스를 black-bg 뒤에제거하기
+        //2.그냥 remove를하면 black-bg안에 모든걸 눌러도 닫힘 = 이벤트버블링현상
+        //3.이벤트버블링현상을 막기위해 function안에 e를넣고
+        //4.e.target(내가누른게)==black-bg(배경)이라면 
+        //5.그때 이벤트를 실행해라
+        document.getElementsByClassName('black-bg')[0].addEventListener('click', function (e) {
+          if (e.target == document.querySelector('.black-bg')) {
+            document.querySelector('.black-bg').classList.remove('show')
+          }
+        })
+      </script>
+    </div>
+  </div>
+  <!--스클롤바 내리면 글씨 작게 만들기-->
+  <nav class="navar navar-ligth bg-light">
+    <span class="navar-brand">jsshop</span>
+  </nav>
+  <div style="height:100px"></div>
+
+
+  <script>
+    //스크롤바 내리면 navar의 글씨 작게만들기 
+    //1.window란 현재 페이지를 말함.
+    //2.scrollY은 현재페이지의 위치를 말함
+    //3.scrollY가 10보다작을때 즉 스크롤을 10px이상 내렸을때 폰트사이즈를 30px로하겠다
+    //4.scrollY가 9보다 클때 즉 스크롤을 9px이하로 내렸을때 폰트사이즈를 50px로 하겠다.
+    window.addEventListener('scroll', function () {   // 현재페이지를 스크롤할때마다 함수를 쓰겠다라는뜻
+      var 내림 = window.scrollY                        // window.scrollY을 변수에 담았음
+      if (내림 > 10) {
+        document.getElementsByClassName('navar-brand')[0].style.fontSize = '30px';
+      } else if (내림 < 9) {
+        document.getElementsByClassName('navar-brand')[0].style.fontSize = '50px';
+      }
+    })
+
+  </script>
+
+  <script>
+    // setTimeout 이란 자바스크립트 기본함수임
+    // setTimeout 을사용할땐 setTimeout(Function(){},ms(밀리세컨))
+    // 1000ms는 1초임
+    setTimeout(function () { console.log('안녕') }, 1000)
+
+    setTimeout(function () {
+      document.getElementsByClassName('alert')[0].style.display = 'none';
+    }, 5000)
+  </script>
+
+
+  <script>
+    //카운트만들기
+    //1.1초마다 숫자5를 1씩 줄여야함
+    var count = 5; //2.count라는 변수에 5라는 값을주고
+    setInterval(function () { //3.1초마다 실행해야하니 setInterval 함수를 사용해야함
+      count -= 1; //4.count에 -1을하고
+      if (count >= 0) { //5.count가 0보다 크거나 같으면
+        document.querySelector('#num').innerHTML = count;
+        //6.id값인 num의 html을 count로 바꿔줌
+      }
+    }, 1000) //7.이걸 1초마다 반복함.
+  </script>
+
+
+  <!--캐러렐(이미지슬라이드 만들기)-->
+  <div style="overflow: hidden">
+    <div class="alert alert-danger">
+      <span id="num">5</span>초 이내 구매시 사은품 증정
+    </div>
+    <div class="slide-container">
+      <div class="slide-box ">
+        <img src="car1.png">
+      </div>
+      <div class="slide-box ">
+        <img src="car2.png">
+      </div>
+      <div class="slide-box ">
+        <img src="car3.png">
+      </div>
+    </div>
+  </div>
+
+  <button class="before">이전</button>
+  <button class="slide-1">1</button>
+  <button class="slide-2">2</button>
+  <button class="slide-3">3</button>
+  <button class="next">다음</button>
+
+  <script>
+
+    //캐러렐(이미지슬라이드)만들기 
+    //1.버튼을 누르면 해당 버튼의 이미지로 돌아가게 css를설정해놨음
+    //2.버튼을 눌렀을때 transform이 -100vw씩 이동하게끔
+    //3.다음버튼을 눌렀을때 1번이면 2번이 보이게 2번이면 3번이보이게 3번누르면 1번이 보이게해야함
+    document.getElementsByClassName('slide-1')[0].addEventListener('click', function () {
+      document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(0vw)'
+    })
+
+    document.getElementsByClassName('slide-2')[0].addEventListener('click', function () {
+      document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-100vw)'
+    })
+
+    document.getElementsByClassName('slide-3')[0].addEventListener('click', function () {
+      document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-200vw)'
+    })
+
+
+    //3.다음버튼
+    var 지금사진 = 0;             // 1.지금사진이라는 변수를 정해주고
+    document.getElementsByClassName('next')[0].addEventListener('click', function () {
+      지금사진 += 1               // 2.지금사진이 클릭될때마다 +1을 해주고
+      if (지금사진 == 1) {         //3.지금사진이 1번이면 'translateX(-100vw)'으로 변경
+        document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-100vw)'
+
+      } else if (지금사진 == 2) {   //4.지금사진이 2번이라면 'translateX(-200vw)'으로변경
+        document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-200vw)'
+      }
+    })
+
+    //4.이전버튼은 다음버튼과 같은형식
+    var 사진지금 = 3
+    var transform = document.getElementsByClassName('slide-container')[0].style.transform;
+
+    document.getElementsByClassName('before')[0].addEventListener('click', function () {
+      var transform = document.getElementsByClassName('slide-container')[0].style.transform;
+      사진지금 -= 1
+      if (사진지금 == 2) {
+        document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-100vw)'
+      } else if (사진지금 == 1) {
+        document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(0vw)'
+      }
+    })
+
+  </script>
+  <!--아래의 스크롤바를 내렸을때 alert창을 띄우게하기 -->
+  <div id="scroll1" style="width: 200px; height: 100px; overflow-y: scroll; ">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga libero non atque odit facere iste est vel soluta ex
+    voluptatibus molestias magni accusantium perferendis, fugiat itaque cum deserunt quam. Impedit?
+    <script>
+      //1.아래의 스크롤바를 내렸을때 alert창을 띄우게하기
+      //2.window는 html의 전체장이기 때문에 div로 설정해준 임의의 스크롤은 html 전체가 아니라서
+      //3.window 대신 document를 사용해야함.
+      //4.scrollY는 window에서만 실행되는 명령어고
+      //5.scrollTop는 document로 실행되는 명령어임
+      document.getElementById('scroll1').addEventListener('scroll', function () {
+        var 다내림 = document.getElementById('scroll1').scrollTop;
+        if (다내림 > 80) {
+          alert('다내렸군요')
+        }
+      })
+
+      var 현재페이지실제높이 = document.querySelector('html').scrollHeight
+      console.log(현재페이지실제높이)
+      var 보이는부분의높이 = document.querySelector('html').clientHeight
+      console.log(보이는부분의높이)
+      var 현재스크롤양 = window.scrollY
+      console.log(현재스크롤양)
+
+    </script>
+  </div>
+
+</body>
+
+</html>

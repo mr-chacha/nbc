@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입페이지</title>
+  <link rel="stylesheet" href="style.css">
+  <script src=""></script>
+</head>
+
+<body>
+
+  <section class="login-form">
+    <h1>회원가입</h1>
+    <form action="">
+      <div class="int-area">
+        <input type="email" name="id" id="signUpemail" autocomplete="off" required>
+        <label for="id">이메일</label>
+      </div>
+      <div class="int-area">
+        <input type="password" name="pw" id="signUppassword" autocomplete="off" required>
+        <label for="pw">비밀번호</label>
+      </div>
+      <div class="btn-area">
+        <button id="singUpbutton" type="submit">회원가입하기</button>
+      </div>
+
+    </form>
+    <div class="caption">
+      <a href="index.html">로그인하기</a>
+    </div>
+  </section>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCPhO8U7uC9EQesZiUUBidqbmGhQgn242o",
+      authDomain: "poject-6355d.firebaseapp.com",
+      projectId: "poject-6355d",
+      storageBucket: "poject-6355d.appspot.com",
+      messagingSenderId: "65734710701",
+      appId: "1:65734710701:web:d36bc135a6f895867d7d24",
+      measurementId: "G-ELGHVE40M3"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
+
+    const auth = getAuth();
+    //회원가입 하기 파이어베이스 
+    document.getElementById('singUpbutton').addEventListener('click', (event) => {
+      event.preventDefault()
+      const signUpemail = document.getElementById('signUpemail').value
+      const signUppassword = document.getElementById('signUppassword').value
+
+      createUserWithEmailAndPassword(auth, signUpemail, signUppassword)
+        .then((userCredential) => {
+          alert('회원가입성공')
+          location.href = './index.html'
+          // Signed in 
+          const user = userCredential.user;
+          // ...
+        })
+        .catch((error) => {
+          alert('회원가입실패')
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          // ..
+        });
+
+    })
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="og:title" content="지회수 자기소개 페이지" />
+    <meta property="og:description" content="안녕하세요. 지회수 입니다." />
+    <meta
+      property="og:image"
+      content="https://images.wallpaperscraft.com/image/single/lamp_outlet_idea_electricity_120422_1280x960.jpg"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/1625166111.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="../static/main.js" defer></script>
+
+    <title>Hoesu's page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+    <!--헤더-->
+    <header>
+      <div class="container">
+        <nav>
+          <div class="home_icon">
+            <a href="http://localhost:5000/"
+              ><i class="fa-sharp fa-solid fa-house" id="icon"></i
+            ></a>
+          </div>
+          <ul>
+            <li>
+              <button data-animation-scroll="true" data-target="#main">
+                Main
+              </button>
+            </li>
+            <li>
+              <button data-animation-scroll="true" data-target="#about">
+                About Me
+              </button>
+            </li>
+            <li>
+              <button data-animation-scroll="true" data-target="#contact">
+                Contact
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- 메인 페이지 -->
+    <main id="main">
+      <h1 class="title">JIHOESU</h1>
+      <img src="../static/img/흑진주.png" alt="흑진주" class="pearl_img" />
+      <i class="fa-solid fa-computer-mouse" id="main_icon"></i>
+    </main>
+    <!-- 자기소개 -->
+    <div id="about">
+      <div class="profile">
+        <div class="profile_img">
+          <img src="../static/img/프로필3.jpg" alt="내사진" />
+        </div>
+        <div class="profile_text">
+          <h3>저는</h3>
+          <p>
+            안녕하세요. 지회수 라고 합니다.<br />
+            이전까지 웹 컨텐츠 / 패키지 디자이너로 일해오다가,<br />
+            웹 서비스의 전반을 구현하고자 개발자로 전향하려고 합니다. <br />
+            생각이 무척 많고, 계획하는 걸 좋아하는 저는 INFJ 입니다.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <section id="introduce">
+      <div class="contents">
+        <div class="contents-inner">
+          <h4 class="inner_title">객관적으로 저는</h4>
+          <p class="inner_text">
+            스스로 부족함을 알기 때문에, 항상 배려하는 마음과 배우려는 자세를
+            갖추고자 노력합니다.
+          </p>
+        </div>
+        <div class="contents-inner">
+          <h4 class="inner_title">협업과정의 저는</h4>
+          <p class="inner_text">
+            상대방의 의견을 귀 기울여 듣고, 저 또한 의견을 제시하며 충분한
+            소통의 과정 속에서 프로젝트를 완성해 나아갑니다.
+          </p>
+        </div>
+        <div class="contents-inner">
+          <h4 class="inner_title">저의 목표는</h4>
+          <p class="inner_text">
+            생활의 밀접한 부분에서 유용함을 줄 수 있는 서비스로 많은 사람에게
+            도움을 줄 수 있는 개발자가 되고 싶습니다.
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="bg"></div>
+    <!-- 연락처 -->
+    <section id="contact">
+      <div class="card">
+        <div class="icon">
+          <i class="fa-sharp fa-solid fa-at"></i>
+        </div>
+        <div class="info-text">
+          <h3>e-mail</h3>
+          <p class="inner_text">newasborn@gmail.com</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="icon">
+          <a href="https://velog.io/@newas_born"
+            ><i class="fa-solid fa-blog"></i>
+          </a>
+        </div>
+        <div class="info-text">
+          <h3>velog</h3>
+          <p class="inner_text">@newasborn</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="icon">
+          <i class="fa-solid fa-location-crosshairs"></i>
+        </div>
+        <div class="info-text">
+          <h3>address</h3>
+          <p class="inner_text">Seoul, Republic of Korea</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

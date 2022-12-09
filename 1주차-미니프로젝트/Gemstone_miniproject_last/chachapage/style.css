@@ -1,0 +1,198 @@
+/*여기부터 애니메이션 효과임*/
+@keyframes rolling {
+  0%{
+    transform: translateY(0);
+  }
+  20%{
+    transform: translateY(-16.6%);
+  }
+  40%{
+    transform: translateY(-33.3%);
+  }
+  60%{
+    transform: translateY(-49.9%);
+  }
+  80%{
+    transform: translateY(-66.5%);
+  }
+  100%{                                       
+    transform: translateY(-83.1%);   
+    /*transform: translateY 이건 와이축으로 이동하는 애니메이션 효과*/
+  }/* 회전해야할게 5개의 list 나누기 100%이라 나누기5를 해야함*/
+}
+
+
+/*여기부터 기본 css*/
+body, h1, h2, h3, p, ul, .icons{ 
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3{
+  font-size: 100%;
+  font-weight: normal;
+}
+
+li{
+  list-style-type: none;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+
+}
+
+body{
+  background-color: #111;
+  color: #999;
+}
+
+/*여기까지 원래 페이지에 존재하는 마진값을 없애는 작업*/
+
+.portrait{
+  background-image: url(img/profile3.jpg);
+  background-size: cover;
+  background-position: center;
+  padding-top: 80%; /* 16:9 비율임*/
+}
+
+.profile{
+  padding: 7%;
+}
+
+.profile-header,
+.profile-section{
+  padding-bottom: 50px;
+}
+
+.profile-section h2 {
+  font-size: 1.5em;
+  border-top: 3px solid;        /*section 위에 3px 줄 긋기*/
+  color: #00ffff;
+  margin-bottom: 20px;
+}
+
+.name{
+  font-size: 30px;
+  line-height: 2;    /* 한줄의 크기를 조절하는 코드*/
+  font-style: italic;
+  margin-top: -30px;
+  margin-bottom: 30px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.name-job{
+  display: inline-block;
+  color: white;
+  vertical-align: top;   /* 상단을 기점으로 위치를 잡아주는 코드*/
+  height: 2em;          /*부모의 폰트사이즈에 1을 곱하여 조절하는 코드*/
+  overflow: hidden;    /* heigth 30px 이외에 것들을 숨겨주는 코드*/
+  padding-right: 0.5em;
+  box-shadow: inset 0 0 50px #111;
+}
+
+.name-job-list{
+ animation-name: rolling;                   /*이름을 롤링으로 잡아줌*/
+ animation-duration: 10s;                  /*몇초마다 회전함*/
+ animation-iteration-count: infinite;    /*무한대로 카운트함*/
+ animation-direction: reverse;          /*애니메이션효과를 아래로 내려가게 리버스해줌*/
+}
+
+.name-title{
+  font-size: 1.5em; /*부모의 폰트사이즈에 1.4를 곱하여 조절하는 코드*/
+  line-height: 1;
+  color: #00ffff;
+  position: relative; /*맨앞으로 튀어나오게끔*/
+}
+
+.icons{
+  margin: 20px 0;
+  margin-bottom: 0px;
+}
+
+.icons a{
+  background-image: url(img/icon3.png);
+  background-color: white;
+  border-radius: 3px;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-indent: -9999px;
+}
+
+.icons a.myblog { background-position: left top; }
+.icons a.instagram { background-position: center top; }
+.icons a.teampage { background-position: right top; }
+.icons a:hover{background-position-y: bottom; }
+
+
+.timeline{
+  font-size: 0.8rem;     /*폰트사이즈 그대로 이용할때 사용함 rem */
+  color: #666;
+  
+}
+.timeline li h3{
+  color:white;
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  
+}
+.timeline li{
+  padding-bottom: 20px;
+}
+
+.timeline li:last-child{
+  padding-bottom: 0px;
+}
+
+.graph li{
+  background: rgb(190,238,238);
+background: linear-gradient(90deg, rgba(190,238,238,1) 0%, rgba(0,245,255,1) 100%);
+  color: #111;
+  padding: 0.4em 1em;
+  margin: 0.4em 0;
+  border-radius: 50px;
+}
+
+.graph li::before{
+  content:attr(data-score);      /*data core이랑 h3사이에 score값을 불러와서 넣어라*/
+  float: right;          /*넣어준 글자를 오른쪽에 배치함*/
+}
+
+.graph li[data-score="30%"]{ /*scroe가 30% 인것을 wideth 30%로 맞춰주게하라*/
+  width: 30%;
+  box-sizing: border-box;
+}
+.graph li[data-score="20%"]{
+  width: 20%;
+  box-sizing: border-box;
+}
+.graph li[data-score="15%"]{
+  width: 15%;
+  box-sizing: border-box;
+}
+.graph li[data-score="10%"]{
+  width: 12%;
+  box-sizing: border-box;
+}
+@media ( max-width:1200px){
+
+}
+
+@media( min-width:768px){
+  .portrait{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 50vw;  /*vw는 view width 이므로 전체장 크기의 가로사이즈*/
+    height: 100vh;  /*vh는 view width 이므로 전체장 크기의 세로사이즈*/
+    padding: 0;
+  }
+  .profile{
+    margin-left: 50vw;
+  }
+}
+
+
+

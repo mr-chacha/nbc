@@ -1,0 +1,209 @@
+@charset "UTF-8";
+
+/*공통*/
+@media screen and (max-width:1800px){
+    .inner {
+        margin: 0 50px;
+      }
+}
+
+/*header*/
+@media screen and (max-width:1250px){
+    .header {
+        height: auto;
+        border-bottom: 1px solid #fff;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+      }
+      .header h2 {
+        cursor:pointer;
+        font-size: 60px;
+        font-weight: 300;
+        margin: 0px 0 0 0px;
+        color: #fff;
+        line-height:80px;
+      }
+      .header p {
+        font-size:14px;
+        color: #fff;
+        margin:0 0 10px 0;
+      }
+}
+
+/*main visual*/
+@media screen and (max-width:1800px){
+    .main_box ul li{
+        width:250px;
+    }
+    .main_box ul li img{
+        width:250px;
+    }
+    .main_box ul li img:hover{
+        width:280px;
+        margin-top:-20px;
+    }
+    .main_box{height:790px;}
+    .main_box ul{
+    margin-top:125px;
+}
+}
+
+@media screen and (max-width:1600px){
+    .main_box ul li{
+        width:220px;
+    }
+    .main_box ul li img{
+        width:220px;
+    }
+    .main_box ul li img:hover{
+        width:250px;
+        margin-top:-20px;
+    }
+    .main_box{height:650px;}
+    .main_box ul{
+    margin-top:100px;
+}
+}
+
+@media screen and (max-width:1450px){
+    .main_box ul li{
+        width:200px;
+    }
+    .main_box ul li img{
+        width:200px;
+    }
+    .main_box ul li img:hover{
+        width:230px;
+        margin-top:-20px;
+    }
+    .main_box{height:550px;}
+    .main_box ul{
+    margin-top:80px;
+}
+}
+
+@media screen and (max-width:1350px){
+    .main_box ul li{
+        width:190px;
+    }
+    .main_box ul li img{
+        width:190px;
+    }
+    .main_box ul li img:hover{
+        width:210px;
+        margin-top:-15px;
+    }
+    .main_box{height:535px;}
+    .main_box ul{
+    margin-top:80px;
+}
+}
+
+@media screen and (max-width:1200px){
+    .main_box ul li{
+        width:180px;
+    }
+    .main_box ul li img{
+        width:180px;
+    }
+    .main_box ul li img:hover{
+        width:200px;
+        margin-top:-15px;
+    }
+    .main_box{
+        height:500px;
+    }
+    .main_box ul{
+    margin-top:75px;
+    }
+    .main_box ul li:nth-child(1) img:hover {
+        box-shadow: 0px 0px 20px 5px rgba(0, 248, 204, 0.4);
+      }
+      .main_box ul li:nth-child(2) img:hover {
+        box-shadow: 0px 0px 20px 5px rgba(244, 244, 244, 0.4);
+      }
+      .main_box ul li:nth-child(3) img:hover {
+        box-shadow: 0px 0px 20px 5px rgba(0, 48, 255, 0.4);
+      }
+      .main_box ul li:nth-child(4) img:hover {
+        box-shadow: 0px 0px 20px 5px rgba(0, 255, 6, 0.4);
+      }
+      .main_box ul li:nth-child(5) img:hover {
+        box-shadow: 0px 0px 20px 5px rgba(255, 0, 0, 0.4);
+      }
+}
+
+@media screen and (max-width:1200px){
+    .main_box ul li{
+        width:180px;
+    }
+    .main_box ul li img{
+        width:180px;
+    }
+    .main_box ul li img:hover{
+        width:200px;
+        margin-top:-15px;
+    }
+    .main_box{
+        height:500px;
+    }
+    .main_box ul{
+    margin-top:75px;
+    }
+    .main_box ul li:nth-child(1) img:hover {
+        box-shadow: 0px 0px 20px 5px rgba(0, 248, 204, 0.4);
+      }
+      .main_box ul li:nth-child(2) img:hover {
+        box-shadow: 0px 0px 20px 5px rgba(244, 244, 244, 0.4);
+      }
+      .main_box ul li:nth-child(3) img:hover {
+        box-shadow: 0px 0px 20px 5px rgba(0, 48, 255, 0.4);
+      }
+      .main_box ul li:nth-child(4) img:hover {
+        box-shadow: 0px 0px 20px 5px rgba(0, 255, 6, 0.4);
+      }
+      .main_box ul li:nth-child(5) img:hover {
+        box-shadow: 0px 0px 20px 5px rgba(255, 0, 0, 0.4);
+      }
+}
+
+@media screen and (max-width:1100px){
+    .main_box{
+        height:auto;
+    }
+
+    .main_box ul {
+        margin: 40px auto 60px;
+        justify-content:center;
+        align-items:center;
+        flex-wrap:wrap;
+        width:800px;
+      }
+      .main_box ul li {
+        margin:20px 0 0 30px;
+        width: 200px;
+        height:290px;
+        overflow:hidden;
+        border-radius: 20px;
+      }
+
+      .main_box ul li img {
+        width: 200px;
+      }
+      .main_box ul li img:hover {
+        margin-left:0px;
+        width: 200px;
+        margin-top:0px;
+      }
+}
+
+@media screen and (max-width:900px){
+    .main_box ul {
+        margin: 30px auto 60px;
+        justify-content:center;
+        align-items:center;
+        flex-wrap:wrap;
+        width:700px;
+      }
+}

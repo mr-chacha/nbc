@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>yunsuk's page</title>
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="YsPage.css" />
+  </head>
+
+  <script>
+    function open_box() {
+      $("#card-box2").hide();
+      $("#card-box3").hide();
+      $("#card-box4").hide();
+      $("#card-box5").hide();
+
+      $("#card-box1").show();
+    }
+
+    function open_box2() {
+      $("#card-box1").hide();
+      $("#card-box3").hide();
+      $("#card-box4").hide();
+      $("#card-box5").hide();
+      $("#card-box2").show();
+    }
+
+    function open_box3() {
+      $("#card-box1").hide();
+      $("#card-box2").hide();
+      $("#card-box4").hide();
+      $("#card-box5").hide();
+      $("#card-box3").show();
+    }
+
+    function open_box4() {
+      $("#card-box1").hide();
+      $("#card-box2").hide();
+      $("#card-box3").hide();
+      $("#card-box5").hide();
+      $("#card-box4").show();
+    }
+
+    function open_box5() {
+      $("#card-box1").hide();
+      $("#card-box2").hide();
+      $("#card-box3").hide();
+      $("#card-box4").hide();
+      $("#card-box5").show();
+    }
+  </script>
+  <body>
+    <header>
+      <div class="inner">
+        <div class="head-container">
+          <div class="head-name">Yunsuk's Page</div>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="gems">
+        <div class="gem">
+          <button
+            type="button"
+            onclick="location.href='http://localhost:5000/'"
+            class="btm_image"
+            id="img_btn"
+          >
+            <img src="sapphire.png" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="main">
+        <div class="main-container">
+          <div class="gem-container">
+            <div class="gem">
+              <div class="gem1">
+                <button
+                  onclick="open_box()"
+                  type="button"
+                  class="btm_image"
+                  id="img_btn"
+                >
+                  <img src="sapphire.png" />
+                </button>
+              </div>
+
+              <div class="gem2">
+                <button
+                  onclick="open_box2()"
+                  type="button"
+                  class="btm_image"
+                  id="img_btn"
+                >
+                  <img src="sapphire.png" />
+                </button>
+              </div>
+              <div class="gem3">
+                <button
+                  onclick="open_box3()"
+                  type="button"
+                  class="btm_image"
+                  id="img_btn"
+                >
+                  <img src="sapphire.png" />
+                </button>
+              </div>
+              <div class="gem4">
+                <button
+                  onclick="open_box4()"
+                  type="button"
+                  class="btm_image"
+                  id="img_btn"
+                >
+                  <img src="sapphire.png" />
+                </button>
+              </div>
+              <div class="gem5">
+                <button
+                  onclick="open_box5()"
+                  type="button"
+                  class="btm_image"
+                  id="img_btn"
+                >
+                  <img src="sapphire.png" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="aboutme" id="card-box1">
+            <div>
+              <ul>
+                <li>
+                  <h3>Life-long Learner</h3>
+                  <br />
+                  <p>MBTI : ENTJ</p>
+                  <p>평생 새로운 걸 배우며 성장하고 싶은 사람</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="aboutme" id="card-box2">
+            <div>
+              <ul>
+                <li>
+                  <h3>Strong Responsibility</h3>
+                  <br />
+                  <p>특히 남들과 같이 하는 일일수록</p>
+                  <p>더 책임감있게 행동!</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="aboutme" id="card-box3">
+            <div>
+              <ul>
+                <li>
+                  <h3>TeamWork Style</h3>
+                  <br />
+                  <p>팀원들과 소통 잘 하기</p>
+                  <p>놓친 부분 없는지 꼼꼼히 확인</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="aboutme" id="card-box4">
+            <div>
+              <ul>
+                <li>
+                  <h3>My Goal</h3>
+                  <br />
+                  <p>Better than yesterday</p>
+                  <p>계속 부딪쳐가며 배워서 성장하기</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="aboutme" id="card-box5">
+            <div>
+              <ul>
+                <li>
+                  <h3>TMI</h3>
+                  <br />
+                  <p>술 너무 너무 사랑♡</p>
+                  <p>하지만 부트캠프 끝나기 전까진 금주!</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="rome.jpg" alt="Yunny" />
+            </div>
+            <div class="flip-card-back">
+              <h1>Jeong Yunsuk</h1>
+              <p>Soon to be WEB developer</p>
+
+              <p>
+                <a href="" onclick="alert('suk921@gmail.com')">
+                  <iconify-icon
+                    icon="clarity:email-line"
+                    style="color: blue"
+                    width="32"
+                    height="32"
+                  ></iconify-icon>
+                </a>
+              </p>
+
+              <p>
+                <a href="https://github.com/YS739" target="_blank"
+                  ><img src="github.png" />
+                </a>
+              </p>
+              <p>
+                <a href="https://velog.io/@chmi4" target="_blank"
+                  ><iconify-icon
+                    icon="simple-icons:velog"
+                    style="color: green"
+                    width="32"
+                    height="32"
+                  ></iconify-icon
+                ></a>
+              </p>
+              <p>
+                <a href="https://medium.com/@yunnyslog" target="_blank"
+                  ><img class="medium" src="Medium.png" />
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+body, html{
+  scroll-behavior: smooth;
+}
+#button{
+  position: absolute;
+  top: 76%;
+  left: 82%;
+  position: fixed;
+  display: none;
+}

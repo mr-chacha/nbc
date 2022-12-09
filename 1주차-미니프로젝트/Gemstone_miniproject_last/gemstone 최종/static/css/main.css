@@ -1,0 +1,259 @@
+@charset "UTF-8";
+
+#wrap {
+  width: 100%;
+  background: #2f2f2f; /*background:url(../../static/image/space.jpg) no-repeat center center;*/
+}
+.inner {
+  margin: 0 100px;
+}
+
+/*header*/
+.header {
+  height: 130px;
+  border-bottom: 1px solid #fff;
+  display: flex;
+}
+.header h2 {
+  font-size: 72px;
+  font-weight: 300;
+  margin: 30px 0 0 100px;
+  color: #fff;
+}
+.header p {
+  color: #fff;
+  margin: 90px 100px 0 auto;
+}
+
+/*main_box*/
+.main_box {
+  height: 850px;
+}
+.main_box ul {
+  margin-top: 65px;
+  display: flex;
+  justify-content: space-between;
+}
+.main_box ul li {
+  cursor: pointer;
+  width: 300px;
+}
+.main_box ul li img {
+  border-radius: 20px;
+  overflow: hidden;
+  width: 300px;
+  transition: ease 0.8s;
+}
+.main_box ul li img:hover {
+  margin-left: -15px;
+  width: 330px;
+  margin-top: -30px;
+  transition: ease 0.8s;
+}
+.main_box ul li:nth-child(1) img:hover {
+  box-shadow: 0px 0px 30px 10px rgba(0, 248, 204, 0.4);
+}
+.main_box ul li:nth-child(2) img:hover {
+  box-shadow: 0px 0px 30px 10px rgba(244, 244, 244, 0.4);
+}
+.main_box ul li:nth-child(3) img:hover {
+  box-shadow: 0px 0px 30px 10px rgba(0, 48, 255, 0.4);
+}
+.main_box ul li:nth-child(4) img:hover {
+  box-shadow: 0px 0px 30px 10px rgba(0, 255, 6, 0.4);
+}
+.main_box ul li:nth-child(5) img:hover {
+  box-shadow: 0px 0px 30px 10px rgba(255, 0, 0, 0.4);
+}
+
+/*main_content*/
+.main_content {
+  height: 100%;
+  position: relative;
+}
+.main_content .content_btn {
+  display: flex;
+  margin-bottom: 30px;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+.main_content .content_btn #main_about_btn {
+  width: 60px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  height: 120px;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  transition: ease 0.5s;
+}
+.main_content .content_btn #main_comment_btn {
+  width: 60px;
+  cursor: pointer;
+  height: 120px;
+  background-color: #000;
+  color: #fff;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  transition: ease 0.5s;
+}
+
+.main_content .content_btn #main_about_btn:hover {
+  background-color: #000;
+  color: #fff;
+  transition: ease 0.5s;
+}
+.main_content .content_btn #main_comment_btn:hover {
+  background-color: #fff;
+  color: #000;
+  transition: ease 0.5s;
+}
+
+/*
+.main_content .content_btn div:hover{background:#fff !important; color:#000 !important;}
+.main_content .content_btn div.sub_active{background-color:#fff !important; color:#000 !important;}
+*/
+.main_content .content_btn #main_about_btn {
+  text-align: center;
+  line-height: 120px;
+  font-weight: 500;
+  font-size: 18px;
+}
+.main_content .content_btn #main_comment_btn {
+  text-align: center;
+  line-height: 120px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.main_content .main_about {
+  width: 100%;
+  background-color: #fff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.main_content .main_about h2 {
+  font-size: 48px;
+  padding: 30px 0 0 50px;
+}
+.main_content .main_about p {
+  display: block;
+  padding: 30px;
+  /*margin: 20px auto;*/
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 35px;
+}
+.main_content .main_about #zem_icon {
+  letter-spacing: 10px;
+  font-size: 20px;
+  margin: 0 auto;
+  padding: 0;
+  color: #2f2f2f;
+}
+
+.main_content .main_comment {
+  width: 100%;
+  background-color: #000;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.main_content .main_comment h2 {
+  font-size: 48px;
+  padding: 30px 0 0 50px;
+  color: #fff;
+}
+.main_content .txt_container {
+  margin: 100px auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.main_content .txt_container .txt_box {
+  margin: 30px auto;
+}
+.main_content .shin_order-info {
+  width: 500px;
+  height: 250px;
+  background: #fff;
+  border-radius: 20px;
+  margin: 150px auto 100px;
+}
+.main_content .shin_order-info div .name_comment {
+  width: 400px;
+  margin: 0 auto;
+}
+.main_content .shin_order-info div .txt_comment {
+  width: 400px;
+  margin: 0 auto;
+}
+.main_content .shin_order-info div .name_comment input {
+  width: 400px;
+  margin-top: 40px;
+  border-radius: 10px;
+  border: 1px solid #000;
+}
+.main_content .shin_order-info div .txt_comment input {
+  width: 400px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid #000;
+}
+.main_content .shin_order-info div button {
+  margin: 25px 190px 0;
+  width: 120px;
+  height: 40px;
+  background: #727272;
+  border-radius: 10px;
+  font-weight: 400;
+  color: #fff;
+  transition: ease 0.5s;
+}
+.main_content .shin_order-info div button:hover {
+  background: #000;
+  transition: ease 0.5s;
+}
+
+.comment_box div div {
+  width: 700px;
+  display: flex;
+  margin: 0 auto;
+}
+.comment_box div div > p {
+  width: 15%;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-bottom: 0;
+  padding: 10px 0;
+}
+.comment_box div div > p:first-child {
+  border-right: 0;
+}
+.comment_box div div > p:last-child {
+  width: 85%;
+}
+.comment_box div:nth-child(2) {
+  padding-bottom: 100px;
+}
+.comment_box div ul li {
+  display: flex;
+  width: 700px;
+  background: #fff;
+  height: 50px;
+  margin: 0 auto;
+  border-bottom: 1px solid #000;
+}
+.comment_box div ul li p {
+  width: 15%;
+  line-height: 50px;
+  padding-left: 15px;
+  font-weight: 400;
+}
+.comment_box div ul li p:last-child {
+  width: 85%;
+  border-left: 1px solid #000;
+}

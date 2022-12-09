@@ -1,0 +1,373 @@
+:root {
+  /* 색상 */
+  --white-color: #fff;
+  --black-color: #140a00;
+  --grey-dark-color: #909090;
+  --grey-light-color: #e0e0e0;
+
+  /* 사이즈 */
+  --spacing: 12px;
+  --spacing-small: 6px;
+  --avatar-size: 50px;
+
+  /* 폰트 사이즈 */
+  --font-large: 4em;
+  --font-medium: 2.6em;
+  --font-regular: 2em;
+  --font-small: 1.2em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('https://images.wallpaperscraft.com/image/single/stars_space_dark_139528_1920x1080.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+ul {
+  list-style: none;
+}
+
+/* 헤더 */
+
+header {
+  position: fixed;
+  color: white;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 80px;
+  padding: 1rem;
+  background-color: transparent;
+  display: flex;
+  justify-content: row;
+}
+
+header .container nav {
+  display: flex;
+  justify-content: row;
+  width: 100%;
+  align-items: center;
+}
+
+header .container nav .home_icon {
+  width: 50px;
+  height: 50px;
+}
+
+header nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+header nav ul li {
+  padding: 10px;
+  margin-left: 50px;
+}
+
+header nav ul li button {
+  font-size: var(--font-small);
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  color: white;
+}
+
+header.active {
+  background-color: #000;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 메인 페이지 */
+
+#main {
+  width: 100%;
+  height: 100vh;
+  color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  position: relative;
+}
+
+#main .title {
+  z-index: 1;
+  letter-spacing: 110px;
+  margin-top: 65%;
+  font-size: var(--font-large);
+  font-weight: 700;
+}
+
+#main .pearl_img {
+  width: 65%;
+  margin: 0 auto;
+  margin-bottom: 0;
+  position: sticky;
+  bottom: 0;
+  filter: drop-shadow(0px -80px 120px cornflowerblue);
+  animation: blink 6s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#main #main_icon {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  font-size: var(--font-regular);
+  animation: upDown 1s ease-in-out infinite;
+}
+
+@keyframes upDown {
+  0% {
+    bottom: 1rem;
+  }
+  50% {
+    bottom: 1.5rem;
+  }
+  100% {
+    bottom: 1rem;
+  }
+}
+
+/* 자기소개 */
+
+#about {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+  background-color: black;
+  transform: translateY(-10px);
+}
+
+#about .profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+#about .profile .profile_img {
+  width: 30%;
+  height: 30%;
+  border-radius: 20%;
+  overflow: hidden;
+}
+
+#about .profile .profile_img img {
+  width: 100%;
+  heignt: 100%;
+  object-fit: cover;
+}
+
+#about .profile .profile_text {
+  width: 50%;
+  color: var(--white-color);
+  margin-left: 80px;
+}
+
+#about .profile .profile_text h3 {
+  font-size: var(--font-large);
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+#about .profile .profile_text p {
+  font-size: var(--font-small);
+  line-height: 2.2rem;
+}
+
+.bg {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+    url('https://images.wallpaperscraft.com/image/single/galaxy_universe_stars_125862_1920x1080.jpg')
+      10% / cover;
+  background-attachment: fixed;
+  height: 400px;
+}
+
+#introduce {
+  height: 40%;
+}
+
+#introduce .contents {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 180px;
+}
+
+#introduce .contents .contents-inner {
+  width: 25%;
+  height: 60%;
+  margin-right: 3%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+  transition: all 300ms ease-in-out;
+}
+
+#introduce .contents .contents-inner:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  filter: drop-shadow(0px -3px 10px cornflowerblue);
+}
+
+#introduce .contents .contents-inner .inner_title {
+  font-size: var(--font-medium);
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+#introduce .contents .contents-inner .inner_text {
+  font-size: var(--font-small);
+}
+
+/* 연락처 */
+
+#contact {
+  width: 100%;
+  height: 300px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact .card {
+  width: 20%;
+  height: 120px;
+  margin-right: 30px;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  flex-direction: row;
+}
+
+#contact .card i {
+  font-size: 2rem;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+/* 반응형 적용 */
+
+@media screen and (max-width: 768px) {
+  header {
+    width: 100%;
+    height: 240px;
+  }
+
+  header nav {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  header .home_icon {
+    margin-left: -10px;
+    text-align: center;
+  }
+
+  header .home_icon #icon {
+    width: 100%;
+  }
+
+  header nav ul {
+    justify-content: center;
+    width: 100%;
+    padding-left: 0;
+    flex-direction: column;
+  }
+
+  header nav ul li {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  header nav ul button {
+    width: 100%;
+  }
+
+  #about {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #about .profile {
+    flex-direction: column;
+    margin: 200px auto;
+  }
+
+  #about .profile .profile_img {
+    width: 80%;
+  }
+
+  #about .profile .profile_text {
+    width: 80%;
+    margin: 50px auto;
+  }
+
+  #introduce .contents {
+    flex-direction: column;
+    margin: 400px auto;
+  }
+
+  #introduce .contents .contents-inner {
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  #contact {
+    flex-direction: column;
+  }
+
+  #contact .card {
+    width: 80%;
+  }
+}

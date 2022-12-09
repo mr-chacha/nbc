@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 부트스트랩 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+  <title>Hello, world!</title>
+
+  <!--Jquery-->
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+</head>
+
+<body>
+
+  <style>
+    ul.list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    ul.list::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    .tab-button {
+      display: block;
+      padding: 10px 20px 10px 20px;
+      float: left;
+      margin-right: -1px;
+      margin-bottom: -1px;
+      color: grey;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .orange {
+      border-top: 2px solid orange;
+      border-right: 1px solid #ccc;
+      border-bottom: 1px solid white;
+      border-left: 1px solid #ccc;
+      color: black;
+      margin-top: -2px;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 10px;
+    }
+
+    .show {
+      display: block;
+    }
+  </style>
+  <!--쇼핑몰 UI만들기-->
+  <div class="container mt-3">
+    <div class="card p-3">
+      <span class="car-brand">브랜드</span>
+      <span class="car-title">상품명</span>
+      <span class="car-price">가격</span>
+    </div>
+  </div>
+  <script>
+    //쇼핑몰 UI만들기
+    var car2 = { name: '소나타', 가격: [50000, 30000, 20000], 브랜드: '현대' }
+    //1.상품명에 이름을 객체 car2의 name이 들어가게
+    document.querySelector('.car-title').innerHTML = car2.name
+    //2.가격에 이름을 객체 car2의 가격이 들어가게
+    document.querySelector('.car-price').innerHTML = car2.가격[0]
+    //3.브랜드에 이름을 객체 car2의 브랜드가 들어가게
+    document.querySelector('.car-brand').innerHTML = car2.브랜드
+  </script>
+
+
+  <div class="container mt-5">
+    <ul class="list">
+      <li class="tab-button">Products</li>
+      <li class="tab-button orange">Information</li>
+      <li class="tab-button">Shipping</li>
+    </ul>
+    <div class="tab-content ">
+      <p>상품설명입니다. Product</p>
+    </div>
+    <div class="tab-content ">
+      <p>스펙설명입니다. Information</p>
+    </div>
+    <div class="tab-content">
+      <p>배송정보입니다. Shipping</p>
+    </div>
+  </div>
+
+  <!--부트스트랩-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+</body>
+<script src="main.js"></script>
+
+</html>

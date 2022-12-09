@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="alert-box" id="alert">
+    <p id="title">알림창임</p>
+    <button id="close">닫기</button>
+  </div>
+  <button onclick="버튼('아이디를입력하세요')">버튼1</button>
+  <button onclick="버튼('비번을입력하세요')">버튼1</button>
+
+  <script>
+    // addEventLisener을 사용할때
+    document.getElementById('close').addEventListener('click', function () {
+      document.getElementById('alert').style.display = 'none'
+    });
+    //onclik 을 사용할때
+    function 알림창열기() {
+      document.getElementById('alert').style.display = 'none'
+
+    }
+    //1.p태그의 내용을 바꿀것 >> innerHTML
+    //2.띄울것 >> display none으로 된걸 block로 바꿀것
+    //3. 중복된 함수 줄일것.
+    function 버튼(구멍) {
+      document.getElementById('title').innerHTML = 구멍
+      document.getElementById('alert').style.display = 'block'
+    }
+    버튼('아이디를입력하세요')
+    버튼('비번을입력하세요')
+
+
+
+  </script>
+
+</body>
+
+</html>

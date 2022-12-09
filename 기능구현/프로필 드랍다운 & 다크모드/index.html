@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EBook</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <!------------main--------------->
+
+    <div class="main">
+
+        <!------------center---------------------->
+
+        <div class="center">
+            <nav>
+                <img src="image/logo.png" class="logo">
+
+                <img src="image/user.png" class="user-pic" onclick="toggleMenu()">
+                <div class="sub-menu-wrap" id="subMenu">
+                    <div class="sub-menu">
+                        <div id="dark-btn">
+                            <span></span>
+                        </div>
+                        <div class="user-info">
+                            <img src="image/user.png">
+                        </div>
+                        <div class="nickname">
+                            <h3>Juno</h3>
+                        </div>
+                        <hr>
+                        <a href="#" class="sub-menu-link">
+                            <img src="image/profile.png">
+                            <p>Edit profile</p>
+                            <span></span>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <img src="image/set.png">
+                            <p>Settings & Privacy</p>
+                            <span></span>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <img src="image/logout.png">
+                            <p>Logout</p>
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <script>
+                let subMenu = document.getElementById("subMenu");
+                function toggleMenu() {
+                    subMenu.classList.toggle("open-menu");
+                }
+            </script>
+            <div class="top_box">
+                <img src=" ">
+                <!-- /* 로고자리. 중앙정렬 해주세요, 로고 말고 다른거 들어가도 괜찮을듯 */ -->
+            </div>
+            <div class="my_post">
+                <div class="post_top">
+                    <img src="image/profile.png">
+                    <input type="text" placeholder="글을 남겨주세요">
+                </div>
+                <hr>
+                <div class="post_bottom">
+                    <div class="post_icon">
+                        <i class="fa-solid fa-video red"></i>
+                        <p>Live video</p>
+                    </div>
+                    <div class="post_icon">
+                        <i class="fa-solid fa-images green"></i>
+                        <p>Photo/video</p>
+                    </div>
+                    <div class="post_icon">
+                        <i class="fa-regular fa-face-grin yellow"></i>
+                        <p>Feeling/activity</p>
+                    </div>
+                </div>
+            </div>
+            <div class="friends_post">
+                <div class="friend_post_top">
+                    <div class="img_and_name">
+                        <img src="image/post_1.jpg">
+                        <div class="friends_name">
+                            <p class="friends_name">
+                                Senuda De Silva
+                            </p>
+                            <p class="time">16h.<i class="fa-solid fa-user-group"></i></p>
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                </div>
+                <img src="image/post_1.jpg">
+                <div class="info">
+                    <div class="emoji_img">
+                        <img src="image/like.png">
+                        <p>You, Charith Disanayaka and 25K others</p>
+                    </div>
+                    <div class="comment">
+                        <p>421 Comments</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="like">
+                    <div class="like_icon">
+                        <i class="fa-solid fa-thumbs-up activi"></i>
+                        <p>Like</p>
+                    </div>
+                    <div class="like_icon">
+                        <i class="fa-solid fa-message"></i>
+                        <p>Comments</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="comment_warpper">
+                    <img src="image/profile.png">
+                    <div class="circle"></div>
+                    <div class="comment_search">
+                        <input type="text" placeholder="Write a comment">
+                        <i class="fa-regular fa-face-smile"></i>
+                        <i class="fa-solid fa-camera"></i>
+                        <i class="fa-regular fa-note-sticky"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="loard">
+                <button>Loard More</button>
+                <input class="form-control mt-2" type="file" id="image">
+                <button class="btn-danger mt-3" id="send">올리기</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--다크모드-->
+    <script>
+        var darkBtn = document.getElementById("dark-btn");
+        darkBtn.onclick = function () {
+            darkBtn.classList.toggle("dark-btn-on");
+            document.body.classList.toggle("dark-theme")
+        }
+    </script>
+
+</body>
+
+</html>

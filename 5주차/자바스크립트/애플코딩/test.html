@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //1. 변수 test를 선언하고, 10이라는 값을 할당하는 코드를 작성해주세요.
+    // var test = 10
+
+    // //변수 testFunction을 선언하고, console.log(’hello sparta!’)를 출력하는 함수를 만들어 변수에 할당하는 코드를 작성해주세요.
+
+    // let testFunction = 'hello sparta!'
+    // function 함수() {
+    //   console.log('testFunction')
+    // }
+    // 함수()
+
+    // //3. for문을 사용하여, 0부터 30 미만의 정수 중, 짝수만을 출력(console.log)해주세요.
+    // for (let i = 0; i < 30; i++) {
+    //   if (i % 2 == 0)
+    //     console.log(i)
+    // }
+
+    // 4.  3번의 예시를 while문을 이용해서 작성해주세요.
+    // let i = 0
+    // while (i < 30) {
+    //   if (i % 2 == 0)
+    //     console.log(i)
+    //   i += 2
+    // }
+
+    // //5. for문을 사용하여, 0부터 30 미만의 정수 중, 짝수만을 문자열로 출력(console.log)해주세요.
+    // for (let i = 0; i < 30; i++) {
+    //   if (i % 2 === 0)
+    //     console.log(i);
+    //   console.log(typeof (i))
+    // }
+
+    // 6.배열을 입력으로 받아, 입력으로 주어진 배열의 요소 중 2의 배수만 ‘배열의 형태로’ 출력하는 함수를 작성하고 호출까지 해주세요.
+    // function 배열() {
+    //   let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    //   for (let i = 0; i < array.length; i++) {
+    //     if (i % 2 == 0) {
+    //       console.log(i)
+    //     }
+    //   }
+    // }
+    // 배열()
+
+    //7.  null과 undefined의 차이에 대해 서술해주세요.
+    //undefined은 변수를 선언했지만 값을 할당하지 않은 상태이고 null은 변수를 선언했지만 빈값을 할당한 상태임.
+
+    //8.  변수 person을 객체를 선언해서, name과 age, address라는 속성을 추가하고, 각 속성에 값을 채워주세요.
+    //let person = { name: 'cha', age: 31, address: '수원' }
+    // console.log(person)
+
+
+    //9.  8에서 선언한 객체를 for문을 이용해서 모든 key와 value를 출력(console.log) 해주세요.
+    // let person = { name: 'cha', age: 31, address: '수원' }
+    // for (let key in person) {
+    //   console.log(key, person[key])
+    // }
+
+    //10. DOM(Document Object Model)에 대해 설명해주세요
+    //DOM은 문서 객체 모델(The Document Object Model의 줄임말) 프로그래밍 언어가 DOM 구조에 접근할 수 있는 방법을 제공하여 그들이 문서 구조, 스타일, 내용 등을 변경할수 있게한다.DOM 은 웹 페이지의 객체 지향 표현이며, 자바스크립트와 같은 스크립팅 언어를 이용해 DOM 을 수정할 수 있다.
+
+
+    //Q. Array에서 흥민라는 자료를 찾고 싶습니다
+    //1. array에서 이름을 찾아주는 함수를 만들고 있습니다.
+    //1-1. 배열을 만들어야함 = array ['이름','이름2']
+    //2. 함수 안에 파라미터로 이름을 집어넣으면
+    //2-1. 함수안에 파라미터로 이름을 찾아야함 = function(이름){코드}
+    //3.그 이름이 출석부에 있으면 콘솔창에 출력해주는 함수를 만들어봅시다.
+    //3-1. (이름)이 출석부에 있으면 콘솔창에 출력해주는 함수를 만들어야함.
+
+    //1-1. 배열을 만들어야함 = array ['이름','이름2']
+    // var 출석부 = ['흥민', '영희', '철수', '재석'];
+    // //2-1. 함수안에 파라미터로 이름을 찾아야함 = function(이름){코드}
+    // function 이름찾기(name) {
+    //   //3-1 배열을 반복하며 돌면서 찾는 이름이 있는지 확인하고
+    //   //3-2 확인했을때 있으면 true니까 그때 콘솔에 있어요를 출력할수 있음.
+    //   for (let i = 0; i < 출석부.length; i++) {
+    //     if (name == 출석부[i]) {
+    //       console.log('있어요')
+    //     } else {
+    //       console.log('없어요')
+    //     }
+    //   }
+    // }
+    // 이름찾기('지니')
+
+    //구구단 만들기
+    //1.2단을 먼저만듬 for (let i = 1; i < 10; i++)
+    //2.2단을 반복문으로 +1씩 더해줌 for (let q = 2; q < 10; q++)
+    //3.그럼 구구단이 완성
+    // for (let q = 2; q < 10; q++) {
+    //   for (let i = 1; i < 10; i++) {
+    //     console.log(q * i)
+    //   }
+    // }
+
+    //평균점수 계산기
+    //1.기존모의고사 성적들을 array자료에 담고
+    //2.array 자료에 담긴걸 첫 파라미터로 입력하고
+    //3.이번모의고사 성적을 두번째 파라미터에 입력하면
+    //4.이번모의고사 성적이 기존모의고사 성적보다 얼마나 우수한지
+    //5.어떻게 함수를 만들면 되는가?
+    //6.평균보다 몇점이 올랐네요 혹은 몇점이 떨어졌네요
+    // //7.
+    // let 기존모의고사 = [10, 20, 30, 40, 50];
+
+    // function 평균(기존모의고사1, 이번모의고사) {
+    //   평균값 = 0;
+    //   for (let i = 0; i < 기존모의고사.length; i++) {
+    //     평균값 = 평균값 + 기존모의고사[i]
+    //   }
+    //   console.log(평균값);
+    // }
+
+
+  </script>
+</body>
+
+</html>

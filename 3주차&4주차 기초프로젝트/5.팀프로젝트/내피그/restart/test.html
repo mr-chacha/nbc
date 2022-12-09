@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    function heart() {
+
+      // 1. 대상 element 선택
+      const element = document.getElementById('greeting');
+
+      // 2. style 변경
+      element.style.color = 'blue';
+    }
+
+    function changeBgColor() {
+
+      // 1. 대상 element 선택
+      const element = document.getElementById('greeting');
+
+      // 2. style 변경
+      element.style.backgroundColor = 'yellow';
+    }
+  </script>
+  <div id='heart'> 안녕하세요 </div>
+  <input onclick='heart()' />
+  <input type='button' onclick='changeBgColor()' />
+
+  function Like_Button() {
+  // 1. 대상 element 선택
+  const element = document.getElementById("heart");
+
+  // 2. style 변경
+  element.style.color = "blue";
+  }
+</body>
+
+</html>

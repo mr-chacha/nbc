@@ -10,7 +10,6 @@ function AddTodo() {
   const dispatch = useDispatch();
 
   const onSubmitHandler = (e) => {
-    console.log(todos.todos.length);
     e.preventDefault();
     if (title === "") return;
 
@@ -26,6 +25,7 @@ function AddTodo() {
 
   return (
     <div>
+      <h1>투두리스트</h1>
       <AddContainer>
         <form onSubmit={onSubmitHandler}>
           <label>제목을 입력하세요</label>

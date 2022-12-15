@@ -31,9 +31,6 @@ const todosSlice = createSlice({
     deleteTodo: (state, action) => {
       state.todos = state.todos.filter((todos) => todos.id !== action.payload);
     },
-    toggle: (state) => {
-      state[0].title = "자바";
-    },
   },
 });
 

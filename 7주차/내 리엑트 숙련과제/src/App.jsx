@@ -8,7 +8,6 @@ import { Routes, Route, Link } from "react-router-dom";
 function App() {
   return (
     <Layout>
-      <Title>투두리스트</Title>
       <Routes>
         <Route
           path="/"
@@ -38,11 +37,6 @@ const AddContainer = styled.div`
 const Layout = styled.body`
   max-width: 1200px;
   min-width: 800px;
-  display: flex;
-  justify-content: center;
-`;
-
-const Title = styled.h1`
   display: flex;
   justify-content: center;
 `;

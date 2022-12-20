@@ -4,8 +4,16 @@ import { v4 as uuidv4 } from "uuid";
 function Input({ setTodos }) {
   const [title, setTitle] = useState();
   const [contents, setContents] = useState();
+
   const add = (event) => {
     event.preventDefault();
+    if (!title) {
+      alert("제목을 입력하세요 ");
+      return;
+    } else if (!contents) {
+      alert("내용을 입력하세요");
+      return;
+    }
 
     const newTodo = {
       title: title,

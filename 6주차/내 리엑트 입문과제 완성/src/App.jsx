@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div>
-      <Header> 헤더입니다. </Header>
+      <Header> My Todo List </Header>
       <main style={{ padding: "20px" }}>
         {/*인풋입력부분 */}
         <Input setTodos={setTodos} />
@@ -26,7 +26,6 @@ function App() {
         {/* todos state를 props 해줌  */}
         <TodoList isActive={false} todos={todos} setTodos={setTodos} />
       </main>
-      <footer>푸터</footer>
     </div>
   );
 }

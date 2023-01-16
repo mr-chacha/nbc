@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { removeTodo, switchTodo } from "../../modules/todos";
-import { TodoBox, TodoList } from "./style";
+import { TodoBox, TodoList, Todo } from "./style";
 
 function TodoLIst({ toggle }) {
   const todos = useSelector((state) => state.todos);
@@ -24,20 +24,22 @@ function TodoLIst({ toggle }) {
         .map((item) => {
           return (
             <TodoList key={item.id}>
-              <h4>{item.title}</h4>
-              <p>{item.content}</p>
-              <button onClick={() => changeBtn(item.id)}>
-                {toggle ? "완료" : "취소"}
-              </button>
-              <button onClick={() => delBtn(item.id)}>삭제</button>
-              <br></br>
-              <button
-                onClick={() => {
-                  navigate(`/${item.id}`);
-                }}
-              >
-                상세보기
-              </button>
+              <Todo>
+                <h4>{item.title}</h4>
+                <p>{item.content}</p>
+                <button onClick={() => changeBtn(item.id)}>
+                  {toggle ? "완료" : "취소"}
+                </button>
+                <button onClick={() => delBtn(item.id)}>삭제</button>
+                <br></br>
+                <button
+                  onClick={() => {
+                    navigate(`/${item.id}`);
+                  }}
+                >
+                  상세보기
+                </button>
+              </Todo>
             </TodoList>
           );
         })}

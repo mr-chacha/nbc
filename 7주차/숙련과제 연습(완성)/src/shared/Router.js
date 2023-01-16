@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Detail from "../pages/Detail";
 import Main from "../pages/Main";
-import Thisis404 from "../pages/Thisis404";
 import Header from "../redux/\bcomponents/Header/Header";
 
 const Router = () => {

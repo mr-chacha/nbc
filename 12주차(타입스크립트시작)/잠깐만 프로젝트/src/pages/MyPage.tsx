@@ -20,6 +20,7 @@ const MyPage = () => {
     onChangeDefaultImg,
     storeImg,
   } = useEditProfile();
+
   const { handleChangeNickname, handleChangePwd, handleDeleteAccount } =
     useButtonReactions({
       pwdRelatedValues,
